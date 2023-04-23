@@ -1,3 +1,4 @@
+%%writefile app_main_712.py
 
 import streamlit as st 
 import numpy as np
@@ -36,10 +37,10 @@ with tab1:
     x3 = ChestPainType_encoder.transform([x3])[0]
 
     #'RestingBP'
-    x4 = st.slider('RestingBP', 0, 210, 130)
+    x4 = st.slider('RestingBP', 0, 200, 100)
 
     #'Cholesterol'
-    x5 = st.slider('Cholesterol', 0, 700, 180)
+    x5 = st.slider('Cholesterol', 0, 603, 300)
 
     #'FastingBS'
     x6 = st.slider('FastingBS', 0, 1, 0)
@@ -49,14 +50,14 @@ with tab1:
     x7 = RestingECG_encoder.transform([x7])[0]
 
     #'MaxHR'
-    x8 = st.slider('MaxHR', 0, 202, 60)
+    x8 = st.slider('MaxHR', 60, 202, 100)
 
     #'ExerciseAngina'
     x9 = ['N']
     x9 = ExerciseAngina_encoder.transform([x9])[0]
 
     #'Oldpeak'
-    x10 = st.slider('Oldpeak', 0, 0, 6)
+    x10 = st.slider('Oldpeak', -2, 6, 3)
 
     #'ST_Slope'
     x11 = ['Down']
